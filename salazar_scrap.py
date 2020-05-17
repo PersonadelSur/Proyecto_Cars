@@ -3,7 +3,12 @@ from bs4 import BeautifulSoup as soup
 import pandas as pd
 import requests
 
-'https://www.salazarisraelusados.cl/web/autos-usados?page=2'
+url0 = 'https://www.salazarisraelusados.cl/web/autos-usados'
+url1 = 'https://www.salazarisraelusados.cl/web/autos-usados?page=2'
+url2 = 'https://www.salazarisraelusados.cl/web/autos-usados?page=3'
+urln = 'https://www.salazarisraelusados.cl/web/autos-usados?page='.n
+
+while urln = 'https://www.salazarisraelusados.cl/web/autos-usados?page='n
 
 def simple_request(link):
     headers = {'Content-Type': 'text/css'}  #codificación charset=utf-8 ?

@@ -26,7 +26,7 @@ def simple_parser(contenido_web):
 
 simple_parser(web_content)
 
-#Modificación del tipo de objeto de Bytes a Str
+#Modificación del tipo de objeto de Bytes a beautiful soup
 
 def simple_parser(contenido_web):
     page_soup = soup(str(contenido_web), "html.parser")
@@ -51,7 +51,7 @@ def object_convert(tablas):
 
 seleccion = tablas_datos1 + tablas_datos2
 
-detalle = tablas_datos1.findAll("Strong" + "li")
+detalle = tablas_datos1.findAll("Strong")
 
 string_tabla1 = object_convert(tablas_datos1)
 tabla1 = string_tabla1.findAll("li")
@@ -98,7 +98,7 @@ Salazar = simple_parser(web_content)
 type(Salazar)
 
 #All Cars
-Cars = Salazar.findAll("div", {"id":"w0"})
+Cars = Salazar.find("div", {"id":"w0"})
 
 type(Cars)
 
@@ -166,6 +166,8 @@ clean = re.sub('<strong>|</strong>|<li>|</li>|<h4 class="card-title card-price">
 
 clean = re.sub('<strong>|</strong>|<li>|</li>|<h4 class="card-title card-price">\n','', df_car.iloc[1])
 
+# .replace
+
 #convertir a lista
 clean_list = []
 def str_convert(parse):
@@ -226,7 +228,7 @@ def get_details(text):
     count = 0
     for i in range(len(car_details_short)):
         if count == 0:
-            year.append(car_details_short[i])
+            year.appende(car_details_short[i])
             count +=1
         elif count == 1:
             km.append(car_details_short[i])
